@@ -232,11 +232,5 @@ function retropie_welcome() {
 retropie_welcome
 
 # RETROPIE PROFILE END
-
 alias fix="sudo killall fbcp; con2fbmap 1 1 && clear"
 
-if [[ $(tty) == "/dev/tty1" ]]; then
-    /usr/bin/fbcp &
-    emulationstation
-    sudo killall fbcp
-fi
