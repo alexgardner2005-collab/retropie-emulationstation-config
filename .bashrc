@@ -234,3 +234,8 @@ retropie_welcome
 # RETROPIE PROFILE END
 alias fix="sudo killall fbcp; con2fbmap 1 1 && clear"
 
+# Auto-restart EmulationStation when exiting terminal
+if [[ $- == *i* ]]; then
+    trap '/usr/bin/fbcp & emulationstation' EXIT
+fi
+
